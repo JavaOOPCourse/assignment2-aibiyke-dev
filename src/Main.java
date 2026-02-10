@@ -27,10 +27,20 @@ public class Main {
 
                 case 1:
                     // TODO: Read input and add Book
+                    System.out.println("Title : "); String t = scanner.nextLine();
+                    System.out.println("Author :"); String a = scanner.nextLine();
+                    System.out.println("Year :"); int y = scanner.nextInt();
+                    library.addBook(new Book(t, a, y));
                     break;
 
                 case 2:
                     // TODO: Read input and add EBook
+                    System.out.println("Title :"); String t1 = scanner.nextLine();
+                    System.out.println("Author :"); String a1 = scanner.nextLine();
+                    System.out.println("Year : "); int y1 = scanner.nextInt();
+                    System.out.println("File size :"); double f = scanner.nextDouble();
+                    EBook book = new EBook(t1, a1, y1, f);
+                    library.addBook(book);
                     break;
 
                 case 3:
@@ -39,14 +49,20 @@ public class Main {
 
                 case 4:
                     // TODO: Search book
+                    System.out.println("Title of book :"); String t2 = scanner.nextLine();
+                    library.searchByTitle(t2);
                     break;
 
                 case 5:
                     // TODO: Borrow book
+                    System.out.println("Title :"); String t3 = scanner.nextLine();
+                    library.borrowBook(t3);
                     break;
 
                 case 6:
                     // TODO: Return book
+                    System.out.println("Title :"); String t4 = scanner.nextLine();
+                    library.returnBook(t4);
                     break;
 
                 case 7:

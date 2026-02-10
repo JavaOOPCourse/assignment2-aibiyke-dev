@@ -9,49 +9,59 @@ public class Book {
     // TODO: Implement parameterized constructor
     public Book(String title, String author, int year) {
         // implement
+        this.title = title;
+        this.author = author;
+        this.year = year;
     }
 
     // TODO: Implement copy constructor
     public Book(Book other) {
         // implement
+        this.title = other.title;
+        this.author = other.author;
+        this.year = other.year;
     }
 
     // TODO: Implement getters
     public String getTitle() {
-        return null;
+        return title;
     }
 
     public String getAuthor() {
-        return null;
+        return author;
     }
 
     public int getYear() {
-        return 0;
+        return year;
     }
 
     public boolean isAvailable() {
-        return false;
+        return isAvailable;
     }
 
     // TODO: Implement borrow logic
     public void borrowBook() {
         // implement
+        isAvailable = false;
     }
 
     // TODO: Implement return logic
     public void returnBook() {
         // implement
+        isAvailable = true;
     }
 
     // TODO: Override toString()
     @Override
     public String toString() {
-        return "";
+        return "title: " + title + ", author: " + author + ", year: " + year + ", is available: " + isAvailable;
     }
 
     // TODO: Override equals()
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if(this == obj) return true;
+        Book other = (Book) obj;
+        return title.equalsIgnoreCase(other.title) && author.equalsIgnoreCase(other.author) && year == other.year;
     }
 }
