@@ -5,6 +5,7 @@ public class EBook extends Book {
     // TODO: Implement constructor using super()
     public EBook(String title, String author, int year, double fileSize) {
         super(title, author, year);
+        оглриио
         // implement
     }
 
